@@ -505,6 +505,7 @@ export default class HTML5Backend {
   }
 
   handleSelectStart(e) {
+    console.log("SELECT")
     const { target } = e;
 
     // Only IE requires us to explicitly say
@@ -514,6 +515,7 @@ export default class HTML5Backend {
     }
 
     // Inputs and textareas should be selectable
+    console.log(target, target.tagName, target.isContentEditable)
     if (
       target.tagName === 'INPUT' ||
       target.tagName === 'SELECT' ||
